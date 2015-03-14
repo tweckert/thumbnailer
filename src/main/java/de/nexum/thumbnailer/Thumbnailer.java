@@ -91,5 +91,18 @@ public class Thumbnailer {
         transformation = new AffineTransformOp(AffineTransform.getScaleInstance(scaleFactor, scaleFactor), AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
         return transformation.filter(image, null);
     }
+	
+	public static void main(String[] argv) {
+		
+		try {
+			
+			Thumbnailer thumbnailer = new Thumbnailer();
+			BufferedImage image = thumbnailer.readImage("/Users/tweckert/Downloads/Borussia_de_webseite_des_jahres_2014.jpg");
+			BufferedImage scaledImage = thumbnailer.scaleImageToSize(240, 240, image);
+			thumbnailer.writeImage(scaledImage, "jpg", "/Users/tweckert/Downloads/Borussia_de_webseite_des_jahres_2014_scaled.jpg");
+		} catch (Throwable t) {
+			
+		}
+	}
 
 }
