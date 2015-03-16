@@ -97,11 +97,11 @@ public class Thumbnailer {
 		try {
 			
 			Thumbnailer thumbnailer = new Thumbnailer();
-			BufferedImage image = thumbnailer.readImage("/Users/tweckert/Downloads/Borussia_de_webseite_des_jahres_2014.jpg");
+			BufferedImage image = thumbnailer.readImage(argv[0]);
 			BufferedImage scaledImage = thumbnailer.scaleImageToSize(240, 240, image);
-			thumbnailer.writeImage(scaledImage, "jpg", "/Users/tweckert/Downloads/Borussia_de_webseite_des_jahres_2014_scaled.jpg");
+			thumbnailer.writeImage(scaledImage, "jpg", argv[1]);
 		} catch (Throwable t) {
-			
+			System.err.println(t.getMessage());
 		}
 	}
 
