@@ -1,9 +1,9 @@
-package de.nexum.test;
+package javax.test;
 
 import java.io.File;
 
 /**
- * @author <a href="mailto:thomas.weckert@nexum.de">Thomas Weckert</a>
+ * @author Thomas Weckert
  */
 public abstract class AbstractTest {
 	

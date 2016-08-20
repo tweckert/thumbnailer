@@ -1,17 +1,18 @@
-package de.nexum.thumbnailer;
+package javax.thumbnailer;
 
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
+import javax.test.AbstractTest;
+import javax.thumbnailer.Thumbnailer;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.nexum.test.AbstractTest;
-
 /**
- * @author <a href="mailto:thomas.weckert@nexum.de">Thomas Weckert</a>
+ * @author Thomas Weckert
  */
 public class ThumbnailerTest extends AbstractTest {
 	

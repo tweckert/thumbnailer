@@ -1,4 +1,4 @@
-package de.nexum.thumbnailer;
+package javax.thumbnailer;
 
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -24,7 +24,7 @@ import javax.imageio.stream.MemoryCacheImageOutputStream;
 import org.apache.commons.io.IOUtils;
 
 /**
- * @author <a href="mailto:thomas.weckert@nexum.de">Thomas Weckert</a>
+ * @author Thomas Weckert
  */
 public class Thumbnailer {
 	
