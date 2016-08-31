@@ -24,6 +24,8 @@ import javax.imageio.stream.MemoryCacheImageOutputStream;
 import org.apache.commons.io.IOUtils;
 
 /**
+ * Imaging operation to resize (scale) a {@link BufferedImage}.<p/>
+ * 
  * @author Thomas Weckert
  */
 public class Thumbnailer {
@@ -43,6 +45,11 @@ public class Thumbnailer {
 			width = targetWidth;
 			height = targetHeight;
 		}
+		
+		if (width <= targetWidth && height <= targetHeight) {
+			// the given image is in both dimensions smaller than the desired target width/height- return the image "as is"
+			return scaledImage;
+		}		
 
 		do {
 			
